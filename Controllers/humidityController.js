@@ -59,3 +59,26 @@ exports.setMinimalHumidity = (req, res) => {
 		})
 	})
 }
+
+exports.addNewHumidity = (req, res) => {
+	if (!req.body.humidity && !req.body.time) {
+		return res.status(400).json({
+			status: "fail",
+			message: "Bad request",
+		})
+	}
+
+	const value = req.body.humidity
+	const date = { day: new Date().getDate(), month: new Date().getMonth() + 1 }
+	const time = req.body.time
+
+	humidity.humidities.daily.push({ value: value, date: date, time: time })
+	humidity.humidities.weekly.push({ value: value, date: date, time: time })
+
+	fs.writeFile("./data/humidity.json", JSON.stringify(humidity), err => {
+		res.status(200).json({
+			status: "sucess",
+			data: humidity,
+		})
+	})
+}

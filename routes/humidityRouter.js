@@ -12,5 +12,6 @@ router
 	.route("/minimal")
 	.get(humidityController.getMinimalHumidity)
 	.patch(humidityController.setMinimalHumidity)
+router.route("/send").post(humidityController.addNewHumidity)
 
 module.exports = router

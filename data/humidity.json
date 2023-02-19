@@ -2,7 +2,11 @@
 	"actual": 45,
 	"minimal": 30,
 	"humidities": {
-		"daily": [30, 45, 50, 36, 57, 78, 23, 45, 23, 65, 23],
-		"weekly": [30, 45, 50, 36, 57, 78, 23, 45, 23, 65, 23]
+		"daily": [
+			{ "value": 50, "date": { "day": 19, "month": 2 }, "time": "13:45" }
+		],
+		"weekly": [
+			{ "value": 50, "date": { "day": 19, "month": 2 }, "time": "13:45" }
+		]
 	}
 }
