@@ -15,7 +15,12 @@ wsServer.on("connection", socket => {
 	})
 
 	socket.on("message", function message(data) {
-		console.log("received: %s", data)
+		try {
+			let jsonData = JSON.parse(data)
+			console.log(jsonData)
+		} catch (err) {
+			console.log(err)
+		}
 	})
 })
 
