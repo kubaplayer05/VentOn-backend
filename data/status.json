@@ -1,1 +1,1 @@
-{"power":"false","plan":{"everyday":[],"custom":[]}}
+{"power":"false","plan":{"everyday":{"length":1,"data":[{"id":1,"start":"08:30","end":"09:30"}]},"custom":{"mon":{"length":0,"data":[]},"tue":{"length":0,"data":[]},"wed":{"length":0,"data":[]},"thu":{"length":0,"data":[]},"fri":{"length":0,"data":[]},"sat":{"length":0,"data":[]},"sun":{"length":0,"data":[]}}}}

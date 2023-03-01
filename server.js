@@ -37,15 +37,32 @@ wsServer.on("connection", socket => {
 						break
 
 					case "minHum":
-						// TODO: add minimum Humidity handler
+						wsController.setMinimalHum(jsonData.value)
+						wsController.sendMsg(wsServer, jsonData, "esp8266")
 						break
 
 					case "planEveryday":
-						// TODO: add everyday plan handler
+						wsController.addEveryday(jsonData.value)
+						wsController.sendPlan(wsServer, jsonData, "esp8266")
 						break
 
 					case "planCustom":
-						// TODO: add custom plna handler
+						wsController.addCustom(jsonData.value)
+						wsController.sendPlan(wsServer, jsonData, "esp8266")
+						break
+					case "delatedEveryday":
+						wsController.sendMsg(
+							wsServer,
+							{ head: "delatedEveryday", value: "true" },
+							"esp8266"
+						)
+						break
+					case "delatedCustom":
+						wsController.sendMsg(
+							wsServer,
+							{ head: "delatedCustom", value: "true" },
+							"esp8266"
+						)
 						break
 				}
 			}

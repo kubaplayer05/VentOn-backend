@@ -1,1 +1,12 @@
-{"actual":50,"minimal":30,"humidities":{"daily":[{"value":50,"date":{"day":19,"month":2},"time":"13:45"}],"weekly":[{"value":50,"date":{"day":19,"month":2},"time":"13:45"}]}}
+{
+	"actual": 50.3,
+	"minimal": 35,
+	"humidities": {
+		"daily": [
+			{ "value": 50, "date": { "day": 19, "month": 2 }, "time": "13:45" }
+		],
+		"weekly": [
+			{ "value": 50, "date": { "day": 19, "month": 2 }, "time": "13:45" }
+		]
+	}
+}
